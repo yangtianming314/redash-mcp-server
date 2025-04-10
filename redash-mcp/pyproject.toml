@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redash-mcp"
+version = "1.0.0"
+description = "Redash MCP Server"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "requests>=2.31.0",
+    "uv>=0.15.0",
+    "modelcontextprotocol-sdk>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["uvicorn>=0.29.0"]
+
+[tool.setuptools]
+packages = ["redash_mcp"]
